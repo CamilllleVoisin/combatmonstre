@@ -43,4 +43,5 @@ while PV != 0:
         print(f"Votre kill streak est de {suite_de_monstres_tues + 1} et"
               f" vous avez {nb_victoire} victoires et {nb_defaite} défaites.\n")
     elif menu == "4":
+        print("Vous quittez le jeu.")
         exit()
