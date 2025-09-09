@@ -42,3 +42,5 @@ while PV != 0:
         print(f"Vous fuyez votre combat comme un lâche et perdez un PV. \nVous avez maintenant {PV} PV")
         print(f"Votre kill streak est de {suite_de_monstres_tues + 1} et"
               f" vous avez {nb_victoire} victoires et {nb_defaite} défaites.\n")
+    elif menu == "4":
+        exit()
