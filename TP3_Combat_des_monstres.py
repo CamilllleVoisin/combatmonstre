@@ -42,6 +42,9 @@ while PV != 0:
         print(f"Vous fuyez votre combat comme un lâche et perdez un PV. \nVous avez maintenant {PV} PV")
         print(f"Votre kill streak est de {suite_de_monstres_tues + 1} et"
               f" vous avez {nb_victoire} victoires et {nb_defaite} défaites.\n")
+    elif menu == "3":
+        print("Les règels sont simples, vous lancez un dé et regardez si vous avez un score supérieur à celui du monstre.\nSi oui, vous gagnez sa force en PV, si non, vous perdez sa force en PV.\n"
+              "Lorsque vous gagnez, votre kill streak augmente et vous gagnez votre score d'une victoire, si vous perdez, votre streak se reset et vous avez un defaite.")
     elif menu == "4":
         print("Vous quittez le jeu.")
         exit()
