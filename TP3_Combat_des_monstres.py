@@ -35,14 +35,13 @@ while PV != 0:
             suite_de_monstres_tues = 0
             print(f"Vous avez maintenant {PV} PV.\nVotre kill streak est maintenant {suite_de_monstres_tues} "
                   f"et vous avez {nb_defaite} défaites et {nb_victoire} victoires ")
-            force_monstre = rd.randint(1, 5)
 
         elif lancer_player >= force_monstre:
             nb_victoire += 1
             PV = PV + force_monstre
             suite_de_monstres_tues = suite_de_monstres_tues + 1
             print(f"Vous avez gagné {force_monstre} PV, vous avez maintenant {PV} PV")
-            force_monstre = rd.randint(1, 5)
+        force_monstre = rd.randint(1, 5)
     elif menu == "2":
         nb_monstres_rencontres += 1
         PV = PV - 1
