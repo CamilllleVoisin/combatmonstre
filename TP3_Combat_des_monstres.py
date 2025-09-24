@@ -22,7 +22,7 @@ while PV != 0:
     menu = str(input("Que voulez vous faire? \n1- Faire mon combat "
                      "\n2- Contourner le monstre, passer au prochain et perdre un PV \n3- Afficher les règles "
                      "\n4- Quitter la partie \n"))
-    force_debut = force_monstre
+    force_monstre = force_monstre
     if menu == "1":
         nb_monstre_combattus += 1
         nb_monstres_rencontres += 1
@@ -42,7 +42,7 @@ while PV != 0:
             PV = PV + force_monstre
             suite_de_monstres_tues = suite_de_monstres_tues + 1
             print(f"Vous avez gagné {force_monstre} PV, vous avez maintenant {PV} PV")
-        force_debut = rd.randint(1, 5)
+        force_monstre = rd.randint(1, 5)
     elif menu == "2":
         nb_monstres_rencontres += 1
         PV = PV - 1
@@ -56,7 +56,7 @@ while PV != 0:
               "\nSi oui, vous gagnez sa force en PV, si non, vous perdez sa force en PV.\n"
               "Lorsque vous gagnez, votre kill streak augmente et vous gagnez votre score d'une victoire, "
               "si vous perdez, votre streak se reset et vous avez un defaite.\n")
-        force_monstre = force_debut
+        force_monstre = force_monstre
     elif menu == "4":
         print("Vous quittez le jeu.")
         exit()
