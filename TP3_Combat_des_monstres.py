@@ -15,13 +15,14 @@ nb_victoire = 0
 nb_monstre_combattus = nb_victoire + nb_defaite
 nb_monstres_rencontres = nb_victoire + nb_defaite
 while PV != 0:
-    force_debut = force_monstre
+
     print(f"Vous combattez contre votre {nb_monstre_combattus + 1}e monstre et vous rencontrez votre"
           f" {nb_monstres_rencontres + 1}e monstre.")
     print(f"La dificulté du prochain monstre est : {force_monstre}.")
     menu = str(input("Que voulez vous faire? \n1- Faire mon combat "
-                     "\n2- Skipper mon combat et perdre un PV \n3- Afficher les règles "
+                     "\n2- Contourner le monstre, passer au prochain et perdre un PV \n3- Afficher les règles "
                      "\n4- Quitter la partie \n"))
+    force_debut = force_monstre
     if menu == "1":
         nb_monstre_combattus += 1
         nb_monstres_rencontres += 1
@@ -41,7 +42,7 @@ while PV != 0:
             PV = PV + force_monstre
             suite_de_monstres_tues = suite_de_monstres_tues + 1
             print(f"Vous avez gagné {force_monstre} PV, vous avez maintenant {PV} PV")
-        force_monstre = rd.randint(1, 5)
+        force_debut = rd.randint(1, 5)
     elif menu == "2":
         nb_monstres_rencontres += 1
         PV = PV - 1
@@ -59,3 +60,5 @@ while PV != 0:
     elif menu == "4":
         print("Vous quittez le jeu.")
         exit()
+if PV == 0:
+    print("Vous êtes morts, redémarrez le programme pour jouer a nouveau.")
