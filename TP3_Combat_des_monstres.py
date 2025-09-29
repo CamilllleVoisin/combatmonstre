@@ -23,7 +23,7 @@ while PV != 0:
     if nb_victoire == 3:
         boss_rencontre += 1
         if boss_rencontre == 1:
-            force_monstre = rd.randint(3, 7) + rd.randint(3, 7)
+            force_monstre = rd.randint(5, 7) + rd.randint(5, 7)
             print("Attention! Vous allez affronter un boss! Vous n'avez PAS le droit de skipper!")
     print(f"La dificulté du prochain monstre est : {force_monstre}.")
     menu = str(input("Que voulez vous faire? \n1- Faire mon combat "
