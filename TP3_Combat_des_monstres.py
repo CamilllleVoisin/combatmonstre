@@ -60,7 +60,7 @@ while pv != 0:
                 combat_boss = True
 
     elif menu == "2":
-        if combat_boss == True:
+        if combat_boss is True:
             print("\nOh la la! Vous avez essayé de fuir le boss, mais le voilà qui s'interpose ente la porte et vous!"
                   " Vous pensiez faire quoi?? :p")
             force_monstre = rd.randint(5, 7) + rd.randint(5, 7)
@@ -74,7 +74,6 @@ while pv != 0:
             print(f"Votre kill streak est de {suite_de_monstres_tues} et"
                   f" vous avez {nb_victoire} victoires et {nb_defaite} défaites et "
                   f"vous avez skippé {skipped_combats}combats.\n")
-
 
     elif menu == "3":
         print("Les règels sont simples,"
