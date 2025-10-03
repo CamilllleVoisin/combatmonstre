@@ -17,7 +17,7 @@ nb_monstre_combattus = nb_victoire + nb_defaite
 nb_monstres_rencontres = nb_victoire + nb_defaite
 boss_rencontre = 0
 skipped_combats = 0
-while pv != 0:
+while pv > 0:
 
     print(f"Vous combattez contre votre {nb_monstre_combattus + 1}e monstre et vous rencontrez votre"
           f" {nb_monstres_rencontres + 1}e monstre.")
@@ -44,8 +44,10 @@ while pv != 0:
                   f"et vous avez {nb_defaite} défaites et {nb_victoire} victoires et "
                   f"vous avez skippé {skipped_combats} combats ")
             force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
+            combat_boss = False
 
         elif lancer_player >= force_monstre:
+            combat_boss = False
             nb_victoire += 1
             pv += force_monstre
             suite_de_monstres_tues += 1
@@ -63,7 +65,7 @@ while pv != 0:
         if combat_boss is True:
             print("\nOh la la! Vous avez essayé de fuir le boss, mais le voilà qui s'interpose ente la porte et vous!"
                   " Vous pensiez faire quoi?? :p")
-            force_monstre = rd.randint(5, 7) + rd.randint(5, 7)
+
         else:
             force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
             nb_monstres_rencontres += 1
@@ -86,5 +88,5 @@ while pv != 0:
     elif menu == "4":
         print("Vous quittez le jeu.")
         exit()
-if pv == 0:
+if pv <= 0:
     print("Vous êtes morts, redémarrez le programme pour jouer a nouveau.")
