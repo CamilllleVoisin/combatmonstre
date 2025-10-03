@@ -8,8 +8,8 @@ import random as rd
 
 pv = 20
 combat_boss = False
-force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
-lancer_player = rd.randint(1, 6) + rd.randint(0, 6)
+force_monstre = rd.randint(1, 5) + rd.randint(1, 5)
+lancer_player = rd.randint(1, 6) + rd.randint(1, 6)
 suite_de_monstres_tues = 0
 nb_defaite = 0
 nb_victoire = 0
@@ -30,7 +30,7 @@ while pv > 0:
     if menu == "1":
         nb_monstre_combattus += 1
         nb_monstres_rencontres += 1
-        lancer_player = rd.randint(1, 6) + rd.randint(0, 6)
+        lancer_player = rd.randint(1, 6) + rd.randint(1, 6)
         print("\nVous affrontez le monstre.")
         print(f"Votre force est de : {lancer_player}.")
 
@@ -43,7 +43,7 @@ while pv > 0:
                   f"\nVotre kill streak est maintenant {suite_de_monstres_tues} "
                   f"et vous avez {nb_defaite} défaites et {nb_victoire} victoires et "
                   f"vous avez skippé {skipped_combats} combats ")
-            force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
+            force_monstre = rd.randint(1, 5) + rd.randint(1, 5)
             combat_boss = False
 
         elif lancer_player >= force_monstre:
@@ -55,7 +55,7 @@ while pv > 0:
             print(f"Votre kill streak est de {suite_de_monstres_tues} et"
                   f" vous avez {nb_victoire} victoires et {nb_defaite} défaites et "
                   f"vous avez skippé {skipped_combats} combats.\n")
-            force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
+            force_monstre = rd.randint(1, 5) + rd.randint(1, 5)
             if suite_de_monstres_tues % 3 == 0:
                 force_monstre = rd.randint(5, 7) + rd.randint(5, 7)
                 print("\nAttention! Vous allez affronter un boss! Vous n'avez PAS le droit de skipper!")
@@ -67,7 +67,7 @@ while pv > 0:
                   " Vous pensiez faire quoi?? :p")
 
         else:
-            force_monstre = rd.randint(1, 5) + rd.randint(0, 5)
+            force_monstre = rd.randint(1, 5) + rd.randint(1, 5)
             nb_monstres_rencontres += 1
             pv -= 1
             suite_de_monstres_tues = 0
